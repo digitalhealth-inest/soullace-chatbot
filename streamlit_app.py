@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title("Soullace Virtual Support")
+st.title("BestieBot")
 st.write(
     "This is a virtual emotional assistant."
 )
