@@ -2,9 +2,9 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title("BestieBot v1")
+st.title("BestieBot")
 st.write(
-    "This is a virtual emotional assistant."
+    "Your personal diary &#128522"
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
@@ -12,7 +12,7 @@ st.write(
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 openai_api_key = st.secrets["api_key"]
 if not openai_api_key:
-    st.info("Please add your OpenAI API key to continue.", icon="🗝️")
+    st.info("Please add your LLM API key to continue.", icon="🗝️")
 else:
 
     # Create an OpenAI client.
@@ -30,7 +30,7 @@ else:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("How are you feeling today?"):
 
         # Store and display the current prompt.
         st.session_state.messages.append({"role": "user", "content": prompt})
