@@ -4,7 +4,7 @@ from openai import OpenAI
 # Show title and description.
 st.title("BestieBot")
 st.write(
-    "Your personal diary &#128522"
+    "Your personal diary 😊"
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
